@@ -91,7 +91,7 @@ function App() {
         content={{ title: "Hello", body: "welcome", name: "Tom" }}
         fruits={["바나나", "사과", "포도"]}
       />
-      <Profile name="톰" width="100" height="100" src="1.webp" />
+      <Profile name="톰" width="100" height="100" src="909031_374831_4519.jpg" />
 
       
     </div>
