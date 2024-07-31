@@ -8,7 +8,7 @@ export default function BoardUpdate(){
     const navigator = useNavigate();
 
     const handlupdate = ()=>{
-        axios.put("http://localhost/board" + Params.BoardNo, Lists);
+        axios.put("http://localhost/board/" + Params.BoardNo, Lists);
         navigator("/BoardList");
     }
 
@@ -58,7 +58,7 @@ export default function BoardUpdate(){
         <div>
           <span>
             게시판 작성일자 : 
-            <input value={Lists.writer} onChange={handleChang}/>
+            <input name="writer" value={Lists.writer} onChange={handleChang}/>
           </span>
         </div>
         <button type="button" onClick={handlupdate}>수정</button>
