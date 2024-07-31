@@ -1,8 +1,8 @@
 //종합
 import ComponentList from "./ComponentList";
-import ComponentUpdate from "./ComponentUpdate";
+import ComponentUpdate from "./BExe02_ComponentUpdate";
 import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Container, Card } from "react-bootstrap";
 
 export default function Customer() {
