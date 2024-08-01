@@ -9,7 +9,7 @@ export default function BoardUpdate(){
 
     const handlupdate = ()=>{
         axios.put("http://localhost/board/" + Params.BoardNo, Lists);
-        navigator("/BoardList");
+        navigator("/BoardComponent/BoardList");
     }
 
     const handleChang = (event) => {

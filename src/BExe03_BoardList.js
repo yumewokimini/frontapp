@@ -41,7 +41,7 @@ export default function BoardList() {
             <tr key={idx.boardNo}>
               <td>{idx.boardNo}</td>
               <td>
-                <Link to={"/BoardInfo/" + idx.boardNo}>{idx.title}</Link>
+                <Link to={"/BoardComponent/BoardInfo/" + idx.boardNo}>{idx.title}</Link>
               </td>
               <td>{idx.writer}</td>
               <td>{idx.wdt}</td>
@@ -50,7 +50,7 @@ export default function BoardList() {
         </tbody>
       </table>
       {[...Array(lastPage)].map((p , idx) => (
-        <Link to={"/boardList?page=" + idx+1}>{idx+1} </Link>
+        <Link to={"/BoardComponent/boardList?page=" + (idx+1)}>{idx+1}</Link>
       ))}
     </>
   );

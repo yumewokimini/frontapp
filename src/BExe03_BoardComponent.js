@@ -20,7 +20,7 @@ export default function App() {
   return (
     <>
       <ul>
-        <li><NavLink to="./BoardInfo">BoardInfo</NavLink></li>
+
         <li><NavLink to="./BoardList">BoardList</NavLink></li>
         <li><NavLink to="./BoardInsert">BoardInsert</NavLink></li>
       </ul>

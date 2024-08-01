@@ -1,5 +1,5 @@
 //종합
-import ComponentList from "./ComponentList";
+import ComponentList from "./BExe02_ComponentList";
 import ComponentUpdate from "./BExe02_ComponentUpdate";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";

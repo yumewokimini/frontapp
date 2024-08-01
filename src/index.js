@@ -2,8 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from "./BExe03_BoardComponent";
+// import App from "./BExe03_BoardComponent";
+// import App from "./Comp10_LayoutComponent.js";
+import App from "./Comp16_reduxtoolkit";
 
 import reportWebVitals from "./reportWebVitals";
 

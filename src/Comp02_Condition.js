@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import Replys from "./Replys";
+import {LoginContext} from "./context";
 
 function Item({ name, isPacked }) {
   //   <li className="item">
@@ -25,14 +27,18 @@ function Item({ name, isPacked }) {
 }
 
 function Itmes({ todos }) {
-  const item = todos.map((ele, idx) => (
-    <Item key={idx} name={ele.name} isPacked={ele.isPacked} />
-    // <Itme ...ele/>
-  ));
-  return <>{item}</>;
+  const login = useContext(LoginContext);
+  // const item = todos.map((ele, idx) => (
+  //   <Item key={idx} name={ele.name} isPacked={ele.isPacked} />
+  //   // <Itme ...ele/>
+  // ));
+  return
+  login : {login.userid}
+  <>{item}</>;
 }
 
 export default function Packing() {
+  const login = useContext(loginContext);
   let todos = [
     { name: "Space suit", isPacked: true },
     { name: "Helmet with a golden leaf", isPacked: true },
@@ -49,8 +55,12 @@ export default function Packing() {
     <section>
       <ul>
         <h1>Sally Ride's Packing List</h1>
-        <Itmes todos={todos} />
-
+        <h1>로그인 : {login.userid}</h1>
+        <LoginContext.provider value={{userid:"김유신"}}>
+        <ul>
+          <Itmes todos={todos} />
+        </ul>
+        </LoginContext.provider>
         <h2>댓글리스트</h2>
         <Replys datas={replyList} />
       </ul>

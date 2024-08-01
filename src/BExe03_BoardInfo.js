@@ -10,7 +10,7 @@ export default function BoardInfo() {
   const handlerDelete = (event)=>{
     if(window.confirm("삭제할까요?")){
         axios.delete("http://localhost/board/" + Params.BoardNo);
-        navigator("/BoardList");
+        navigator("/BoardComponent/BoardList");
     }
   }
 
@@ -53,7 +53,7 @@ export default function BoardInfo() {
             게시판 작성일자 : {Lists.writer}
           </span>
         </div>
-        <Link to={"/BoardUpdate/"+Params.BoardNo}>
+        <Link to={"/BoardComponent/BoardUpdate/"+Params.BoardNo}>
         <button type="button">수정</button></Link>
         <button type="button" onClick={handlerDelete}>삭제</button>
       </form>

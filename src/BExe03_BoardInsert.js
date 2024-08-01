@@ -15,7 +15,7 @@ export default function BoardInsert() {
     //ajax등록 요청
     await axios.post("http://localhost/board", form);
     //목록 처리
-    navigator("/BoardList");
+    navigator("/BoardComponent/BoardList");
   };
   return (
     <>
