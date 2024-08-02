@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import Replys from "./Replys";
-import {LoginContext} from "./context";
+// import {LoginContext} from "./context";
 
 function Item({ name, isPacked }) {
-  //   <li className="item">
-  //     {name} {isPacked && "✔"}
-  //   </li>;
-  // <li className="item">
-  //     {isPacked ? name + ' ✔' : name}
-  // </li>
-  // if (isPacked) {
-  //     return (
-  //     <li className="item">{name} ✔</li>
-  //     );
-  // }
-  // return (<li className="item">{name}</li>);
+    <li className="item">
+      {name} {isPacked && "✔"}
+    </li>;
+  <li className="item">
+      {isPacked ? name + ' ✔' : name}
+  </li>
+  if (isPacked) {
+      return (
+      <li className="item">{name} ✔</li>
+      );
+  }
+  return (<li className="item">{name}</li>);
   if (isPacked) {
     return (
       <li className="item">
@@ -27,18 +27,18 @@ function Item({ name, isPacked }) {
 }
 
 function Itmes({ todos }) {
-  const login = useContext(LoginContext);
-  // const item = todos.map((ele, idx) => (
-  //   <Item key={idx} name={ele.name} isPacked={ele.isPacked} />
-  //   // <Itme ...ele/>
-  // ));
+  // const login = useContext(LoginContext);
+  const item = todos.map((ele, idx) => (
+    <Item key={idx} name={ele.name} isPacked={ele.isPacked} />
+    // <Itme ...ele/>
+  ));
   return
-  login : {login.userid}
+  // login : {login.userid}
   <>{item}</>;
 }
 
 export default function Packing() {
-  const login = useContext(loginContext);
+  // const login = useContext(loginContext);
   let todos = [
     { name: "Space suit", isPacked: true },
     { name: "Helmet with a golden leaf", isPacked: true },
@@ -55,12 +55,11 @@ export default function Packing() {
     <section>
       <ul>
         <h1>Sally Ride's Packing List</h1>
-        <h1>로그인 : {login.userid}</h1>
-        <LoginContext.provider value={{userid:"김유신"}}>
+
         <ul>
           <Itmes todos={todos} />
         </ul>
-        </LoginContext.provider>
+      
         <h2>댓글리스트</h2>
         <Replys datas={replyList} />
       </ul>
@@ -69,3 +68,6 @@ export default function Packing() {
 }
 
 //Replys 이름의 값이 datas이기때문에 받는곳도 datas여야함.
+//        <h1>로그인 : {login.userid}</h1>
+//<LoginContext.provider value={{userid:"김유신"}}>
+//</LoginContext.provider>
